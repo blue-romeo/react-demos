@@ -1,4 +1,5 @@
-function Greet() {
+const Greet = () => {
+
   return <h1>not hello world </h1>;
 };
 
