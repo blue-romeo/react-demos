@@ -10,18 +10,16 @@ import Product from "./Components/Product";
 import ProductInfo from "./Components/ProductInfo";
 import ProductList from "./Components/ProductList";
 import UserList from "./Components/UserList";
+import UserStatus from "./Components/UserStatus";
+import Weather from "./Components/Weather";
 import WelcomeMessage from "./Components/WelcomeMessage";
 const App = () => {
   return( 
     <div>
-    <Person name="John Doe" age={30} />
-    <Product name="Laptop" price={999.99} />
-   
-   
-
-     
-  
-  </div>
+    <UserStatus
+    />
+    <Greeting  timeofday="noon"/>
+    </div>
   );
     
 };

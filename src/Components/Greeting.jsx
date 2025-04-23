@@ -1,13 +1,14 @@
 import React from 'react'
-const name = 'John Doe'
-const date= new Date ()
-const Greeting = () => {
-  return (
-    <div>
-      <h1>Hello, {name}!</h1>
-      <p>Today is {date.getDate()}</p>
-    </div>
-  )
+
+const Greeting = ({timeofday}) => {
+  
+return(  
+(timeofday === "morning") ? <h1>Good Morning</h1> :
+(timeofday === "noon") ? <h1>Good Afternoon</h1> :
+(timeofday === "evening") ? <h1>Good Evening</h1> :
+(timeofday === "night") ? <h1>Good Night</h1> :
+<h1>Good Day</h1> )
 }
+
 
 export default Greeting

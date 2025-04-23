@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Person = (props) => {
+const Person = ({name, age}) => {
   return (
     <div>
-      <h1>Person: {props.name} </h1>
-      <p>Age: {props.age} </p>     
+      <h1>Person: {name} </h1>
+      <p>Age: {age} </p>     
     </div>
   )
 }
