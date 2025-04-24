@@ -1,26 +1,25 @@
-import Add from "./Components/Add";
-import Footer from "./Components/Footer";
-import Greet from "./Components/Greet";
-import Greeting from "./Components/Greeting";
-import Header from "./Components/Header";
-import JSXRules from "./Components/JSXRules";
-import Maincontent from "./Components/Maincontent";
-import Person from "./Components/Person";
-import Product from "./Components/Product";
-import ProductInfo from "./Components/ProductInfo";
-import ProductList from "./Components/ProductList";
-import UserList from "./Components/UserList";
-import UserStatus from "./Components/UserStatus";
-import Weather from "./Components/Weather";
-import WelcomeMessage from "./Components/WelcomeMessage";
+import { useState } from "react";
+import React from "react";
+
 const App = () => {
+  const [friend, setFriend] = useState(["John Doe", "Jane Smith", "Alice Johnson"]);
+  const AddFriend = () => setFriend([...friend, "James Bond"]);
+  const RemoveFriend = () => setFriend(friend.filter((f) => f !== "James Bond"));
+  const UpdateFriend = () => setFriend(friend.map((f) => f==="John Doe" ? "John Wick" : f));
+
+
   return( 
-    <div>
-    <UserStatus
-    />
-    <Greeting  timeofday="noon"/>
-    </div>
-  );
+    <section>
+    {friend.map( f => (
+      <li key={Math.random()}> {f} </li>
+    ))}
+
+   <button onClick={AddFriend}>Add Friend</button>
+   <button onClick={RemoveFriend}>Remove Friend</button>
+   <button onClick={UpdateFriend}>Update Friend</button>
+
+    </section>
+  )
     
 };
 export default App;
