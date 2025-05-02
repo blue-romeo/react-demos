@@ -1,21 +1,21 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-import ExampleOne from "./Components/ExampleOne";
-import Counter from "./Components/Counter";
-import TodoList from "./Components/TodoList";
-import Profile from "./Components/Profile";
-import ShoppingList from "./Components/ShoppingList";
 
-const App = () => {
+ 
+const App = () => { 
+  const [value, setValue] = useState(0);
+  const [sm, setSm] = useState(0);
   
-
-  return( 
+useEffect(() => {
+  console.log("call useEffect");
+  document.title = `increment ${value}`;
+},[value, sm]);
+  return(
     <section>
-      
-      <ShoppingList />
-
-
-   
+         <h2> {value}</h2>
+         <button onClick={() => setValue(value+1)}>click me</button>
+         <button onClick={() => setSm(value+1)}>click</button>
     </section>
   )
     
