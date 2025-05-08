@@ -1,19 +1,15 @@
-import React from "react";
-import BasicEffect from "./Components/BasicEffect";
-import EffectCounter from "./Components/EffectCounter";
-import FetchDataEffect from "./Components/FetchDataEffect";
+import UpdateUser from './Components/UpdateUser';
+import {UserProvider} from './Components/UserContext';
+import UserProfile  from './Components/UserProfile';
 
-
- 
 const App = () => { 
+  
   return (
-    <div>
-      
-     <FetchDataEffect/>  
-      
-      
-    </div>
-  );
+    <UserProvider>
+      <UserProfile />
+      <UpdateUser />
+    </UserProvider>      
+  )
 };
 
-export default App;
+export default App; 
