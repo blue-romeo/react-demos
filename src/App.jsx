@@ -1,14 +1,12 @@
-
-import Countered from './Components/Countered';
-import UpdateUser from './Components/UpdateUser';
-import {UserProvider} from './Components/UserContext';
-import UserProfile  from './Components/UserProfile';
+import FocusInput from './Components/FocusInput';
+import Exercise from './Components/Exercise';
 
 
 const App = () => { 
   
   return (
-    <Countered />
+    <Exercise />
+
   )
 };
 
